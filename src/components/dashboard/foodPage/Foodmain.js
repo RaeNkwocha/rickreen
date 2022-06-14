@@ -1,39 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./food.css";
-import beans from "./image/beans.png";
-import fish from "./image/fish.png";
-import meat from "./image/meat.png";
-import rice from "./image/rice.png";
+
 const Foodmain = () => {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  const [cat, setCat] = useState([]);
 
-  const foodCategories = [
-    {
-      id: 1,
-      name: "Rice",
-      image: rice,
-      price: "300.00",
-    },
-    {
-      id: 2,
-      name: "Beans",
-      image: beans,
-      price: "300.00",
-    },
-    {
-      id: 4,
-      name: "Meat",
-      image: meat,
-      price: "300.00",
-    },
-    {
-      id: 5,
-      name: "Fish",
-      image: fish,
-      price: "300.00",
-    },
-  ];
+  const fetchData = () => {
+    fetch(`https://api.sandbox.rickreen.net/foods`)
+      .then((res) => res.json())
+      .then((result) => setData(result))
+      .catch((error) => console.log("error"));
+  };
+  const fetchCategories = () => {
+    fetch(`https://api.sandbox.rickreen.net/food-categories`)
+      .then((res) => res.json())
+      .then((result) => setCat(result))
+      .catch((error) => console.log("error"));
+  };
+  useEffect(() => {
+    fetchData();
+    fetchCategories();
+    console.log(data);
+  }, []);
   return (
     <>
       <div className="food-main-nav-flex">
@@ -65,7 +55,7 @@ const Foodmain = () => {
         <strong>Categories</strong>
         <div className="food-main-chip-flex">
           <div className="food-chip">All</div>
-          {foodCategories.map((category) => (
+          {cat.map((category) => (
             <div className="food-chip">{category.name}</div>
           ))}
         </div>
@@ -74,7 +64,7 @@ const Foodmain = () => {
         <strong>Popular</strong>
       </div>
       <div className="food-main-card-grid">
-        {foodCategories.map((item) => (
+        {data.map((item) => (
           <div>
             <div className="food-main-card">
               <div
@@ -83,11 +73,12 @@ const Foodmain = () => {
                   placeItems: "center",
                 }}
               >
-                <img style={{ marginTop: "30px" }} src={item.image} />
+                <img style={{ marginTop: "30px" }} src={item.thumbnail} />
               </div>
               <div className="food-main-text-holder">
                 <div> {item.name}</div>
-                <p> {item.price}</p>
+                <p> {item.amount}</p>
+                {/* <p> {item.information}</p> */}
               </div>
             </div>
           </div>

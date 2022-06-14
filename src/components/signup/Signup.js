@@ -1,14 +1,14 @@
 import React from "react";
 import Signin from "../form/Signin";
 
-const Signup = () => {
+const Signup = ({ setOpen }) => {
   return (
     <div>
       <div>
         <div className="signin-flex">
           <div className="first-flex">
             <div className="first-input">
-              <Signin />
+              <Signin setOpen={setOpen} />
             </div>
 
             <div style={{ marginTop: "1px", marginLeft: "10px" }}>

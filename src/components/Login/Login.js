@@ -2,14 +2,14 @@ import React from "react";
 import FormField from "../form/FormField";
 import GoogleLogin from "../googleauth/Login";
 
-const Login = () => {
+const Login = ({ setOpen }) => {
   return (
     <div>
       <div>
         <div className="signin-flex">
           <div className="first-flex">
             <div className="first-input">
-              <FormField />
+              <FormField setOpen={setOpen} />
             </div>
 
             <div style={{ marginTop: "1px", marginLeft: "10px" }}>

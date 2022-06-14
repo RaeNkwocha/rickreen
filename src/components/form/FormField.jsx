@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Fields from "./Fields";
 import authService from "../../auth/Services";
 import Spinner from "../loader/Spinner";
-const FormField = () => {
+const FormField = ({ setOpen }) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
@@ -14,7 +14,7 @@ const FormField = () => {
     e.preventDefault();
     setLoading(true);
     setErr("");
-
+    setOpen(false);
     try {
       await authService.signUp(email, password, username).then(() => {
         setLoading(false);

@@ -125,7 +125,7 @@ const Popup = () => {
                 </span>
               </div>
             </div>
-            {sigin ? <Login /> : <Signup />}
+            {sigin ? <Login setOpen={setOpen} /> : <Signup setOpen={setOpen} />}
           </Box>
         </Modal>
       </div>

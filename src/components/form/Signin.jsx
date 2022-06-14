@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Signifield from "./Signifield";
 import authService from "../../auth/Services";
 import Spinner from "../loader/Spinner";
-const Signin = () => {
+const Signin = ({ setOpen }) => {
   const [identifier, setIdentifier] = useState("");
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
@@ -12,6 +12,7 @@ const Signin = () => {
     e.preventDefault();
     setLoading(true);
     setErr("");
+    setOpen(false);
     console.log({ identifier, password });
     try {
       await authService.sigin(identifier, password).then(() => {
