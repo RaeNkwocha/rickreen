@@ -14,11 +14,11 @@ const FormField = ({ setOpen }) => {
     e.preventDefault();
     setLoading(true);
     setErr("");
-    setOpen(false);
     try {
       await authService.signUp(email, password, username).then(() => {
         setLoading(false);
         setErr("hey");
+        setOpen(false);
         window.location.href = "/dashboard";
       });
     } catch (error) {

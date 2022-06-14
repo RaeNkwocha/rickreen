@@ -12,12 +12,12 @@ const Signin = ({ setOpen }) => {
     e.preventDefault();
     setLoading(true);
     setErr("");
-    setOpen(false);
     console.log({ identifier, password });
     try {
       await authService.sigin(identifier, password).then(() => {
         setLoading(false);
         setErr("");
+        setOpen(false);
         window.location.href = "/dashboard";
       });
     } catch (error) {
