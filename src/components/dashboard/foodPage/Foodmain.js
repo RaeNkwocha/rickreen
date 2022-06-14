@@ -83,11 +83,7 @@ const Foodmain = () => {
                   placeItems: "center",
                 }}
               >
-                <img
-                  width="70%"
-                  style={{ marginTop: "30px" }}
-                  src={item.image}
-                />
+                <img style={{ marginTop: "30px" }} src={item.image} />
               </div>
               <div className="food-main-text-holder">
                 <div> {item.name}</div>
