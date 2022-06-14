@@ -18,6 +18,7 @@ const Signin = ({ setOpen }) => {
         setLoading(false);
         setErr("");
         window.location.href = "/dashboard";
+        setOpen(false);
       });
     } catch (error) {
       console.error("Error", error);
@@ -27,7 +28,6 @@ const Signin = ({ setOpen }) => {
       } else {
         setErr(error.message);
       }
-      setOpen(false);
 
       console.log(err, "hey");
     }

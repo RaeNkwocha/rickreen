@@ -19,6 +19,7 @@ const FormField = ({ setOpen }) => {
         setLoading(false);
         setErr("hey");
         window.location.href = "/dashboard";
+        setOpen(false);
       });
     } catch (error) {
       console.error("Error", error);
@@ -26,7 +27,6 @@ const FormField = ({ setOpen }) => {
       setErr("email already taken");
       console.log(err, "hey");
     }
-    setOpen(false);
   };
 
   return (
