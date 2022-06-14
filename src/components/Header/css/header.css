@@ -1,0 +1,89 @@
+.hero-bg-one{
+    background-image: url('https://rickreen.net/assets/background/taxi.png');
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+.hero-bg-two{
+    background-image: url('https://rickreen.net/assets/background/courier.png');
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+    display: none;
+
+
+}
+.hero-bg-three{
+    background-image: url('https://rickreen.net/assets/background/food.png');
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+    display: none;
+
+
+
+}
+.hero-text{
+    padding-top: 200px;
+    padding-left: 50px;
+    
+}
+.mobile-hero{
+    display: block;
+    margin-top: 150px;
+}
+.mobile-hero-heading{
+    padding-left: 20px;
+}
+.mobile-hero-para{
+    padding-left: 20px;
+    margin-top: 15px;
+}
+.mobile-hero img{
+    margin-top: -11px;
+}
+@media only screen and (min-width: 992px) {
+    .hero-bg-one{
+        background-image: url('https://rickreen.net/assets/background/taxi.png');
+        height: 550px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+
+    }
+    .hero-bg-two{
+        background-image: url('https://rickreen.net/assets/background/courier.png');
+        height: 550px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 70px;
+        display: block;
+
+    }
+    .hero-bg-three{
+        background-image: url('https://rickreen.net/assets/background/food.png');
+        height: 550px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 70px;
+        display: block;
+
+    
+    }
+    .hero-text{
+        padding-top: 200px;
+        padding-left: 50px;
+    }
+    .mobile-hero{
+        display: none;
+    }
+}

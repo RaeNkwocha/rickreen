@@ -1,0 +1,39 @@
+.text-center{
+    margin-top: 50px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 2rem;
+}
+.grid-box{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 20px;
+    
+}
+.grid-box:hover{
+    background: #5194FF;
+    color: white;
+}
+.cta-btn button{
+padding: 8px;
+width: 100%;
+background: transparent;
+outline: none;
+border: 2px solid gold;
+color: gold;
+border-radius: 5px;
+}
+@media only screen and (min-width: 992px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 2rem;
+    }
+}
