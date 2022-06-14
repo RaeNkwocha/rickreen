@@ -18,7 +18,6 @@ const FormField = ({ setOpen }) => {
       await authService.signUp(email, password, username).then(() => {
         setLoading(false);
         setErr("hey");
-        setOpen(false);
         window.location.href = "/dashboard";
       });
     } catch (error) {
@@ -27,6 +26,7 @@ const FormField = ({ setOpen }) => {
       setErr("email already taken");
       console.log(err, "hey");
     }
+    setOpen(false);
   };
 
   return (

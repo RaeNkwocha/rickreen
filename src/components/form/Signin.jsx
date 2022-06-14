@@ -17,7 +17,6 @@ const Signin = ({ setOpen }) => {
       await authService.sigin(identifier, password).then(() => {
         setLoading(false);
         setErr("");
-        setOpen(false);
         window.location.href = "/dashboard";
       });
     } catch (error) {
@@ -28,6 +27,7 @@ const Signin = ({ setOpen }) => {
       } else {
         setErr(error.message);
       }
+      setOpen(false);
 
       console.log(err, "hey");
     }
