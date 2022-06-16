@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./food.css";
+import GoogleAuth from "../../googleauth/GoogleContext";
+import FoodItem from "./foodItem";
 
 const Foodmain = () => {
   const navigate = useNavigate();
-  const [data, setData] = useState([]);
-  const [cat, setCat] = useState([]);
+  
+  const { foods, categories } = useContext(GoogleAuth);
 
-  const fetchData = () => {
-    fetch(`https://api.sandbox.rickreen.net/foods`)
-      .then((res) => res.json())
-      .then((result) => setData(result))
-      .catch((error) => console.log("error"));
-  };
-  const fetchCategories = () => {
-    fetch(`https://api.sandbox.rickreen.net/food-categories`)
-      .then((res) => res.json())
-      .then((result) => setCat(result))
-      .catch((error) => console.log("error"));
-  };
-  useEffect(() => {
-    fetchData();
-    fetchCategories();
-    console.log(data);
-  }, []);
+  const [input, setInput] = useState("");
+
+
   return (
     <>
       <div className="food-main-nav-flex">
@@ -49,14 +37,20 @@ const Foodmain = () => {
         </div>
       </div>
       <div className="food-main-input">
-        <input placeholder="search for a food of your choice" />
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="search for a food of your choice"
+        />
       </div>
       <div className="food-main-chip-container">
         <strong>Categories</strong>
         <div className="food-main-chip-flex">
           <div className="food-chip">All</div>
-          {cat.map((category) => (
-            <div className="food-chip">{category.name}</div>
+          {categories.map((category) => (
+            <div key={category.id} className="food-chip">
+              {category.name}
+            </div>
           ))}
         </div>
       </div>
@@ -64,25 +58,11 @@ const Foodmain = () => {
         <strong>Popular</strong>
       </div>
       <div className="food-main-card-grid">
-        {data.map((item) => (
-          <div>
-            <div className="food-main-card">
-              <div
-                style={{
-                  display: "grid",
-                  placeItems: "center",
-                }}
-              >
-                <img style={{ marginTop: "30px" }} src={item.thumbnail} />
-              </div>
-              <div className="food-main-text-holder">
-                <div> {item.name}</div>
-                <p> {item.amount}</p>
-                {/* <p> {item.information}</p> */}
-              </div>
-            </div>
-          </div>
-        ))}
+        {foods
+          .filter((names) => names.name.toLowerCase().includes(input))
+          .map((item) => (
+          <FoodItem  key={item.id} food={item} />
+          ))}
       </div>
     </>
   );

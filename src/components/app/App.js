@@ -27,8 +27,9 @@ const App = () => {
               </div>
               <div style={{ marginTop: "20px" }}>
                 <p>
-                  It's never been easier to order food. Look for the finest
-                  discounts and you'll be lost in a world of delectable food.
+                  It's never been easier to order <strong>food</strong> and
+                  <strong> rides</strong>. Look for the finest discounts and
+                  you'll be lost in a world of delectable food.
                 </p>
               </div>
               <div>

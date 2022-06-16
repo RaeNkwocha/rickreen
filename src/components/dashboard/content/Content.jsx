@@ -10,7 +10,7 @@ const Content = () => {
   return (
     <div>
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
+        <ol style={{ background: "white" }} class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="/">Home</a>
           </li>

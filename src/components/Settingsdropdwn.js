@@ -13,7 +13,7 @@ function ButtonDarkExample() {
         <Dropdown.Toggle
           style={{
             background: "inherit",
-            color: "black",
+            color: "white",
             border: "none",
             outline: "none",
           }}
@@ -23,8 +23,8 @@ function ButtonDarkExample() {
           <span style={{ marginRight: "8px" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="26"
+              height="26"
               fill="currentColor"
               class="bi bi-person-circle"
               viewBox="0 0 16 16"

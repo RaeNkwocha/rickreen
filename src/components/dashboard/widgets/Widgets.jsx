@@ -1,4 +1,7 @@
 import React from "react";
+import ride from "./image/ride.png";
+import food from "./image/food.png";
+import delivery from "./image/delivery (2).png";
 import "./widget.css";
 
 const Widgets = () => {
@@ -7,20 +10,23 @@ const Widgets = () => {
       id: 1,
       name: "Food",
       link: "/food",
+      image: food,
     },
     {
       id: 2,
       name: "Ride",
       link: "/ride",
+      image: ride,
     },
     {
       id: 3,
       name: "Dispatch",
       link: "/dispatch",
+      image: delivery,
     },
   ];
   return (
-    <div>
+    <div className="order-holder">
       <div>
         <h2
           style={{
@@ -42,13 +48,16 @@ const Widgets = () => {
                   style={{
                     display: "grid",
                     placeItems: "center",
-                    margin: "auto",
-                    height: "150px",
-                    zIndex: "100",
                   }}
                 >
                   <h2>{option.name}</h2>
                 </div>
+
+                <img
+                  style={{ paddingBottom: "30px" }}
+                  width="100%"
+                  src={option.image}
+                />
               </div>
             </a>
           </div>

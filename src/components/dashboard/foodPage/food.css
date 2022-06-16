@@ -45,12 +45,12 @@ margin-bottom: 15px;
 }
 .food-main-card-grid{
     display: grid;
-    grid-template-rows: repeat(1,1fr);
+    grid-template-rows: repeat(4,1fr);
     gap: 1rem;
     margin-top: 20px;
 }
 .food-main-card{
-    height: 250px;
+    height: auto;
     cursor: pointer;
     color: black;
     border-radius: 15px;
@@ -66,6 +66,18 @@ margin-bottom: 15px;
     margin-top: 20px;
     place-items: center;
 }
+.food-main-text-holder-btn{
+    outline: none;
+    padding: 5px;
+    border: none;
+    background: #857979;
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    color: white;
+    font-weight: bold;
+}
 @media only screen and (min-width:768px) {
     .food-main-card-grid{
         display: grid;
@@ -75,6 +87,6 @@ margin-bottom: 15px;
         margin-top: 20px;
     }
     .food-main-card img{
-        width: 70%;
+        width: 100%;
     }
 }
