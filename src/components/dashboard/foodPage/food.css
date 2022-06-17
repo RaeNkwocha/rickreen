@@ -45,7 +45,7 @@ margin-bottom: 15px;
 }
 .food-main-card-grid{
     display: grid;
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(1fr);
     gap: 1rem;
     margin-top: 20px;
 }
@@ -80,8 +80,9 @@ margin-bottom: 15px;
 }
 @media only screen and (min-width:768px) {
     .food-main-card-grid{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
+        display: flex;
+        flex-direction: row;
+        /* grid-template-columns: repeat(4,1fr); */
         gap: 1rem;
         place-items: center;
         margin-top: 20px;

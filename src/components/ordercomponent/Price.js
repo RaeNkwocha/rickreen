@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import cartState, {
   cartQtyState,
@@ -19,7 +19,7 @@ const Price = ({}) => {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="search for a food of your choice"
+          placeholder="search for your orders"
         />
       </div>
       <div className="order-main-grid-bxshadow">

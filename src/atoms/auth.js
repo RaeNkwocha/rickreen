@@ -2,7 +2,7 @@ import { atom, selector } from "recoil";
 
 const _cartState = atom({
   key: "_cartState",
-  default: JSON.parse(localStorage.getItem("cart")||"[]") || [],
+  default: JSON.parse(localStorage.getItem("cart") || "[]") || [],
 });
 const cartState = selector({
   key: "cartState",

@@ -15,11 +15,19 @@
   padding: 5px;
   margin-bottom: 10px;
 }
+  .sidenav-position{
+  position: fixed;
+  background: #6aa3ff;
+  }
   @media (max-width: 767.98px) {
     .sidebar {
       top: 11.5rem;
       padding: 0;
     }
+    .sidenav-position{
+      position: fixed;
+      background: #6aa3ff;
+      }
   }
   
   .navbar {
@@ -37,7 +45,10 @@
   .sidebar .nav-link {
     color: #333;
   }
-  
+  .sidenav-position{
+    position: absolute;
+    background: #6aa3ff;
+    }
   .sidebar .nav-link.active {
     color: white;
   }

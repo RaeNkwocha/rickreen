@@ -27,6 +27,8 @@ const OrderMap = ({ cartItem }) => {
       setQty(cartItem.qty - 1);
     }
   };
+
+  // console.log(cartItem.qty);
   return (
     <div>
       {" "}

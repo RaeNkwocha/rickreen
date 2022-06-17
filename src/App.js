@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Food from "./pages/Food";
 import Ride from "./pages/Ride";
 import Dispatch from "./pages/Dispatch";
+import PlaceOrder from "./pages/PlaceOrder";
 function App() {
   return (
     <div>
@@ -24,6 +25,11 @@ function App() {
                   element={<Order />}
                 />
                 <Route path="/food" children={false} element={<Food />} />
+                <Route
+                  path="/food/order/place-orders"
+                  children={false}
+                  element={<PlaceOrder />}
+                />
                 <Route path="/ride" element={<Ride />} />
                 <Route path="/dispatch" element={<Dispatch />} />
               </Route>

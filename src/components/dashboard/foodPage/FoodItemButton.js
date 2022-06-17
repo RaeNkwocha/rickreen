@@ -19,7 +19,7 @@ const FoodItemButton = ({ food }) => {
   };
   return (
     <button className="food-main-text-holder-btn" onClick={viewCart}>
-      {isInCart() ? <div>View your item in cart</div> : <div>Add to cart</div>}
+      {isInCart() ? <div>View cart</div> : <div>Add to cart</div>}
     </button>
   );
 };

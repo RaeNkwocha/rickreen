@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     place-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-top: 35px;
     overflow-x: auto;
     background: white;
@@ -13,6 +13,12 @@
     padding: 10px;
     padding-top: 8px;
     border-radius: 10px;
+}
+.order-main-grid-bxshadow h4{
+    font-size: 0.8rem;
+}
+.order-main-grid-bxshadow h5{
+    font-size: 0.8rem;
 }
 
     .order-main-grid h5{
@@ -26,7 +32,9 @@
     color: white;
 }
 .qnty-holder{
-    padding: 20px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background: #494949;
     text-align: center;
@@ -34,15 +42,19 @@
     border-radius: 10px;
 }
 .qnty-holder-1{
-    padding: 20px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background: #FF715B;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
-    width: 130px;
+    width: 80px;
     border-radius: 10px;
 }
 .qnty-holder-2{
-    padding: 20px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background: #1EA896;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
@@ -50,8 +62,9 @@
     border-radius: 10px;
 }
 .qnty-holder-3{
-    padding: 20px;
-    background: #4C5454;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;    background: #4C5454;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     width: 100%;
@@ -59,6 +72,7 @@
 }
 
 .order-add-item{
+    
     border: 1px solid lightcoral;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     display: grid;
@@ -124,6 +138,12 @@
         padding-top: 8px;
         border-radius: 10px;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    .order-main-grid-bxshadow h4{
+        font-size: 1rem;
+    }
+    .order-main-grid-bxshadow h5{
+        font-size: 1rem;
     }
     
     

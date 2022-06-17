@@ -15,10 +15,6 @@ const FoodItem = ({ food }) => {
         <div className="food-main-text-holder">
           <div> {food.name}</div>
           <p> {food.amount}</p>
-          {/* <p
-            className="cart-desc"
-            dangerouslySetInnerHTML={{ __html: food.information }}
-          ></p> */}
         </div>
         <div style={{ display: "grid", placeItems: "center" }}>
           <FoodItemButton food={food} />
