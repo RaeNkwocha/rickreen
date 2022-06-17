@@ -1,22 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
-import GoogleAuth from "../googleauth/GoogleContext";
+import { useRecoilState, useRecoilValue } from "recoil";
+import cartState, {
+  cartQtyState,
+  cartTotalAmountState,
+} from "../../atoms/auth";
 import Addtoorder from "./Addtoorder";
 import "./css/price.css";
 import OrderMap from "./orderMap";
-const Price = ({ qty, setQty }) => {
-  const { cart } = useContext(GoogleAuth);
+const Price = ({}) => {
+  const [cart] = useRecoilState(cartState);
   const [input, setInput] = useState("");
-  const [price, setPrice] = useState(0);
-
-  const handlePrice = () => {
-    let price = 0;
-    cart.map((item) => (price += qty * item.amount));
-    setPrice(price);
-  };
-
-  useEffect(() => {
-    handlePrice();
-  }, [qty]);
+  const price = useRecoilState(cartTotalAmountState);
+  const cartQty = useRecoilValue(cartQtyState);
 
   return (
     <>
@@ -32,7 +27,7 @@ const Price = ({ qty, setQty }) => {
           <div className="qnty-holder">
             {" "}
             <h4>Quantity</h4>
-            <h5>{qty}</h5>
+            <h5>{cartQty}</h5>
           </div>
           <div className="qnty-holder-1">
             {" "}
@@ -55,9 +50,11 @@ const Price = ({ qty, setQty }) => {
           <div className="food-main-card-grid-one">
             {" "}
             {cart
-              .filter((names) => names.name.toLowerCase().includes(input))
-              .map((item) => (
-                <OrderMap key={item.id} item={item} qty={qty} setQty={setQty} />
+              .filter((cartItem) =>
+                cartItem.item.name.toLowerCase().includes(input)
+              )
+              .map((cartItem) => (
+                <OrderMap key={cartItem.item.id} cartItem={cartItem} />
               ))}
           </div>
           <Addtoorder />

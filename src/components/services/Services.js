@@ -37,7 +37,7 @@ const Services = () => {
       <div>
         <div className="grid-container">
           {service.map((item) => (
-            <div className="grid-box">
+            <div key={item.id} className="grid-box">
               {" "}
               <div style={{ display: "grid", placeItems: "center" }}>
                 <img src={item.img} />

@@ -4,13 +4,13 @@ import Chart from "../chart/Chart";
 const Table = () => {
   return (
     <div>
-      <div class="row">
-        <div class="col-12 col-xl-8 mb-4 mb-lg-0">
-          <div class="card">
-            <h5 class="card-header">Latest transactions</h5>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
+      <div className="row">
+        <div className="col-12 col-xl-8 mb-4 mb-lg-0">
+          <div className="card">
+            <h5 className="card-header">Latest transactions</h5>
+            <div className="card-body">
+              <div className="table-responsive">
+                <table className="table">
                   <thead>
                     <tr>
                       <th scope="col">Order</th>
@@ -29,7 +29,7 @@ const Table = () => {
                       <td>€61.11</td>
                       <td>Aug 31 2020</td>
                       <td>
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="#" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -41,7 +41,7 @@ const Table = () => {
                       <td>$153.11</td>
                       <td>Aug 28 2020</td>
                       <td>
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="#" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -53,7 +53,7 @@ const Table = () => {
                       <td>€61.11</td>
                       <td>Aug 31 2020</td>
                       <td>
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="#" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -65,7 +65,7 @@ const Table = () => {
                       <td>$153.11</td>
                       <td>Aug 28 2020</td>
                       <td>
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="#" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -77,7 +77,7 @@ const Table = () => {
                       <td>€61.11</td>
                       <td>Aug 31 2020</td>
                       <td>
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="#" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -89,7 +89,7 @@ const Table = () => {
                       <td>$153.11</td>
                       <td>Aug 28 2020</td>
                       <td>
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="#" className="btn btn-sm btn-primary">
                           View
                         </a>
                       </td>
@@ -97,13 +97,13 @@ const Table = () => {
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="btn btn-block btn-light">
+              <a href="#" className="btn btn-block btn-light">
                 View all
               </a>
             </div>
           </div>
         </div>
-        <div class="col-12 col-xl-4">
+        <div className="col-12 col-xl-4">
           <Chart />
         </div>
       </div>

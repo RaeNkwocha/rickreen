@@ -1,15 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
-import GoogleAuth from "../../googleauth/GoogleContext";
+import FoodItemButton from "./FoodItemButton";
 
 const FoodItem = ({ food }) => {
-  const [cartView, setCartView] = useState(false);
-  const { cart, setCart } = useContext(GoogleAuth);
-  const viewCart = (item) => {
-    if (cart.indexOf(item) !== -1) return;
-    setCart([...cart, item]);
-    setCartView(true);
-  };
-
   return (
     <div>
       <div className="food-main-card">
@@ -30,12 +21,7 @@ const FoodItem = ({ food }) => {
           ></p> */}
         </div>
         <div style={{ display: "grid", placeItems: "center" }}>
-          <button
-            className="food-main-text-holder-btn"
-            onClick={() => viewCart(food)}
-          >
-            {cartView ? <div>View cart</div> : <div>Add to cart</div>}
-          </button>
+          <FoodItemButton food={food} />
         </div>
       </div>
     </div>

@@ -7,10 +7,10 @@ const Dispatch = () => {
   return (
     <>
       <Nav />
-      <div class="container-fluid">
-        <div class="row">
+      <div className="container-fluid">
+        <div className="row">
           <Sidenav />
-          <main class="col-md-12 ml-sm-auto col-lg-10 px-md-4 py-4">
+          <main className="col-md-12 ml-sm-auto col-lg-10 px-md-4 py-4">
             <Newdispatch />
             <Footer />
           </main>

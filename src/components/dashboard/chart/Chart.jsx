@@ -3,9 +3,9 @@ import React from "react";
 const Chart = () => {
   return (
     <div>
-      <div class="card">
-        <h5 class="card-header">Traffic last 6 months</h5>
-        <div class="card-body">
+      <div className="card">
+        <h5 className="card-header">Traffic last 6 months</h5>
+        <div className="card-body">
           <div id="traffic-chart"></div>
         </div>
       </div>

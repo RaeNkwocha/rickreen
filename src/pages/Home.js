@@ -9,19 +9,19 @@ const Home = ({ setToken }) => {
   return (
     <>
       <nav>
-        <Navigation setToken={setToken}></Navigation>
+        <Navigation setToken={setToken} />
       </nav>
       <header>
-        <Header></Header>
+        <Header />
       </header>
       <section>
-        <Services></Services>
+        <Services />
       </section>
       <section>
-        <App></App>
+        <App />
       </section>
       <footer>
-        <Footer></Footer>
+        <Footer />
       </footer>
     </>
   );

@@ -15,13 +15,15 @@ function App() {
       <LoginProvider>
         <RecoilRoot>
           <Router>
-            {" "}
             <Routes>
-              {" "}
               <Route element={<PrivateRoutes />}>
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/orders" element={<Order />} />
-                <Route path="/food" element={<Food />} />
+                <Route
+                  path="/food/orders"
+                  children={false}
+                  element={<Order />}
+                />
+                <Route path="/food" children={false} element={<Food />} />
                 <Route path="/ride" element={<Ride />} />
                 <Route path="/dispatch" element={<Dispatch />} />
               </Route>

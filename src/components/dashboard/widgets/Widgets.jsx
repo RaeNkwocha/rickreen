@@ -41,7 +41,7 @@ const Widgets = () => {
       </div>
       <div className="options-grid">
         {options.map((option) => (
-          <div className="optionCard">
+          <div key={option.id} className="optionCard">
             <a href={option.link}>
               <div>
                 <div

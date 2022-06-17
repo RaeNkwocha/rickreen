@@ -10,11 +10,11 @@ const Content = () => {
   return (
     <div>
       <nav aria-label="breadcrumb">
-        <ol style={{ background: "white" }} class="breadcrumb">
-          <li class="breadcrumb-item">
+        <ol style={{ background: "white" }} className="breadcrumb">
+          <li className="breadcrumb-item">
             <a href="/">Home</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">
+          <li className="breadcrumb-item active" aria-current="page">
             Overview
           </li>
         </ol>

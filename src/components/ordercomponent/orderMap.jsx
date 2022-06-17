@@ -1,29 +1,36 @@
-import React, { useContext, useState } from "react";
+import { useRecoilState } from "recoil";
+import cartState from "../../atoms/auth";
 import "./css/price.css";
-import GoogleAuth from "../googleauth/GoogleContext";
 
-const OrderMap = ({ item, qty, setQty }) => {
-  const { cart, setCart } = useContext(GoogleAuth);
-  const [newQty, setNewQty] = useState(1);
+const OrderMap = ({ cartItem }) => {
+  const [cart, setCart] = useRecoilState(cartState);
   const handleQty = () => {
-    setNewQty(newQty + 1);
-    setQty(qty + 1);
+    setQty(cartItem.qty + 1);
   };
-  const reduceQty = (id) => {
-    if (qty === 0) {
-      setCart(cart.filter((item) => item.id !== id));
+  const setQty = (newQty) => {
+    const newCart = [...cart];
+    const cartIndex = newCart.findIndex(
+      (result) => result.item.id == cartItem.item.id
+    );
+    if (cartIndex == -1) {
+      return;
     }
-    if (newQty === 0) {
-      setCart(cart.filter((item) => item.id !== id));
+    newCart[cartIndex] = { ...cartItem, qty: newQty };
+    setCart(newCart);
+  };
+  const reduceQty = () => {
+    if (cartItem.qty - 1 === 0) {
+      setCart(
+        cart.filter((_cartItem) => _cartItem.item.id !== cartItem.item.id)
+      );
     } else {
-      setQty(qty - 1);
-      setNewQty(newQty - 1);
+      setQty(cartItem.qty - 1);
     }
   };
   return (
     <div>
       {" "}
-      <div key={item.id}>
+      <div key={cartItem.item.id}>
         <div className="food-main-card">
           {" "}
           <div
@@ -32,11 +39,11 @@ const OrderMap = ({ item, qty, setQty }) => {
               placeItems: "center",
             }}
           >
-            <img src={item.images?.[0].formats.thumbnail.url} />
+            <img src={cartItem.item.images?.[0].formats.thumbnail.url} />
           </div>
           <div className="food-main-text-holder">
-            <div> {item.name}</div>
-            <p> {item.amount}</p>
+            <div> {cartItem.item.name}</div>
+            <p> {cartItem.item.amount}</p>
           </div>
           <div
             style={{
@@ -49,11 +56,11 @@ const OrderMap = ({ item, qty, setQty }) => {
           >
             <div>
               {" "}
-              <button onClick={() => handleQty(item.id)}>+</button>
+              <button onClick={handleQty}>+</button>
             </div>
-            <div className="qty">{newQty}</div>
+            <div className="qty">{cartItem.qty}</div>
             <div>
-              <button onClick={() => reduceQty(item.id)}>-</button>
+              <button onClick={reduceQty}>-</button>
             </div>
           </div>
         </div>
