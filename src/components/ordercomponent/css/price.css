@@ -1,0 +1,251 @@
+.order-main-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    gap: 0.5rem;
+    margin-top: 35px;
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+}
+.order-main-grid-bxshadow{
+    background: white;
+    padding: 10px;
+    padding-top: 8px;
+    border-radius: 10px;
+}
+.order-main-grid-bxshadow h4{
+    font-size: 0.8rem;
+}
+.order-main-grid-bxshadow h5{
+    font-size: 0.8rem;
+}
+
+    .order-main-grid h5{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.order-main-grid h4{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.qnty-holder{
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #494949;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+}
+.qnty-holder-1{
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FF715B;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    width: 80px;
+    border-radius: 10px;
+}
+.qnty-holder-2{
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #1EA896;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+}
+.qnty-holder-3{
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;    background: #4C5454;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.order-add-item{
+    
+    border: 1px solid lightcoral;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 120px;
+}
+.order-place-order{
+    padding: 5px;
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: gray;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: none;
+
+}
+    .qty-btn-add-sub button{
+    border: none;
+    padding: 1px;
+    width: 35px;
+    margin-bottom: 5px;
+
+    }
+    .qty{
+    background: grey;
+    padding: 1px;
+    margin-bottom: 5px;
+    width: 50px;
+    text-align: center;
+    }
+
+    .food-order-main-grid-add-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .food-main-card-grid-one{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        gap: 1rem;
+    }
+
+@media (min-width: 768px) {
+    .order-main-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        place-items: center;
+        gap: 0.5rem;
+        overflow-x: auto;
+        margin-top: 35px;
+       
+    }
+    .order-main-grid-bxshadow{
+        background: white;
+        padding: 50px;
+        padding-top: 8px;
+        border-radius: 10px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    .order-main-grid-bxshadow h4{
+        font-size: 1rem;
+    }
+    .order-main-grid-bxshadow h5{
+        font-size: 1rem;
+    }
+    
+    
+        .order-main-grid h5{
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        color: white;
+    }
+    
+    .order-main-grid h4{
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+    .qnty-holder{
+        padding: 50px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        background: #494949;
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .qnty-holder-1{
+        padding: 50px;
+        background: #FF715B;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        text-align: center;
+        width: 200px;
+        border-radius: 10px;
+    }
+    .qnty-holder-2{
+        padding: 50px;
+        background: #1EA896;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .qnty-holder-3{
+        padding: 50px;
+        background: #4C5454;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .order-add-item{
+        border: 1px solid lightcoral;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 8px;
+        width: 100%;
+    }
+    .order-place-order{
+        padding: 5px;
+        width: 150px;
+        margin-top: 20px;
+        border-radius: 8px;
+        background-color: gray;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border: none;
+    
+    }
+    .qty-btn-add-sub button{
+    border: none;
+    padding: 1px;
+    width: 35px;
+    margin-bottom: 5px;
+    
+    }
+    .qty{
+    background: grey;
+    padding: 1px;
+    margin-bottom: 5px;
+    width: 50px;
+    text-align: center;
+    }
+    .food-main-card-grid-one{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        gap: 1rem;
+        overflow-x: hidden;
+    }
+    .food-order-main-grid-add-items{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        gap: 1rem;
+    }
+    .food-main-card-grid-one{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+        gap: 1rem;
+        overflow-x: auto;
+        height: auto;
+    }
+}

@@ -1,0 +1,125 @@
+.navigation{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: white;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.second-nav ul{
+    display: none;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding-top: 10px;
+
+}
+.nav-icon img{
+
+    display: none;
+}
+.desktop-nav ul{
+    display: none;
+}
+.svg{
+    cursor: pointer;
+}
+.mobile-nav{
+    width: 300px;
+    cursor: pointer;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+
+  .mobile-nav-card{
+      margin: 15px;
+      margin-top: 70px;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
+  }
+  .mobile-nav-card-two{
+      margin: 15px;
+      margin-top: 20px;
+      padding: 20px;
+
+  }
+  .mobile-ul{
+      border-bottom: 1px solid lightgray;
+      width: 150px;
+      margin-top: 10px;
+  }
+  .nav-card-flex{
+      display: flex;
+      gap: 2.5rem;
+  }
+  .mobile-nav h5{
+      font-size: 16px;
+      font-weight: 500;
+  }
+@media only screen and (min-width:768px) {
+    .navigation{
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    }
+    .second-nav ul{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+        padding-top: 10px;
+    
+    }
+    .desktop-nav ul{
+        display: block;
+        cursor: pointer;
+    }
+    .second-nav h5{
+        display: none;
+    }
+    .nav-icon img{
+    
+        display: block;
+    }
+    .svg{
+        display: none;
+    }
+    .mobile-nav{
+     display: none;
+     width: 350px;
+    }
+    .mobile-popup{
+        display: none;
+    }
+}

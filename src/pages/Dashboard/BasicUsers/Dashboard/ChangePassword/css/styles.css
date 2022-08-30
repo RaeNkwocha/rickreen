@@ -1,0 +1,45 @@
+.user-details-grid{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 1rem;
+    align-items: center;
+}
+.user-details-grid button{
+    width: 130px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.user-profile-form input{
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    min-width: 350px;
+
+}
+.update-profile-btn{
+    padding: 8px;
+    margin-top: 20px;
+    background-color: #6AA3FF;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    color: white;
+    border: none;
+
+
+}
+@media only screen and (min-width:768px) {
+    .user-profile-form input{
+        padding: 5px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid gray;
+        min-width: 450px;
+    
+    }
+}

@@ -1,0 +1,93 @@
+.food-main-nav-flex{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.food-main-input input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: #FBF8F8;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.food-main-input {
+display: grid;
+place-items: center;
+margin-top: 30px;
+margin-bottom: 15px;
+}
+.food-chip{
+    border-radius: 100px;
+    /* background-color: red; */
+    font-weight: bold;
+    padding: 8px;
+    width: 70px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+.food-main-chip-flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* overflow-x: scroll;
+    scroll-behavior: smooth; */
+}
+.food-main-chip-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.food-main-card-grid{
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 1rem;
+    margin-top: 20px;
+}
+.food-main-card{
+    height: auto;
+    cursor: pointer;
+    color: black;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+.food-main-card img{
+    width: 35%;
+}
+.food-main-text-holder{
+    display: grid;
+    margin-top: 20px;
+    place-items: center;
+}
+.food-main-text-holder-btn{
+    outline: none;
+    padding: 5px;
+    border: none;
+    background: #857979;
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    color: white;
+    font-weight: bold;
+}
+@media only screen and (min-width:768px) {
+    .food-main-card-grid{
+        display: flex;
+        flex-direction: row;
+        /* grid-template-columns: repeat(4,1fr); */
+        gap: 1rem;
+        place-items: center;
+        margin-top: 20px;
+    }
+    .food-main-card img{
+        width: 100%;
+    }
+}

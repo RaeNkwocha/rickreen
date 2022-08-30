@@ -1,0 +1,136 @@
+.signin-flex{
+    display: grid;
+    grid-template-rows: 50% 40%;
+}
+.secong-grid-item img{
+    display: none;
+}
+.secong-grid-item {
+    display: none;
+}
+.signin-container-holder{
+    display: grid;
+    place-items: center;
+}
+.sigin-container{
+    background-color: white;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+}
+
+.typo-holder{
+    padding-left: 20px;
+    display: grid;
+    place-items: center;
+}
+.first-flex {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 8px;
+}
+.input-style{
+    outline: none;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 50px;
+    border: 2px solid #6AA3FF;
+    width: 100%;
+  
+}
+.confirm-passwrd input{
+    outline: none;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 50px;
+    border: 2px solid #6AA3FF;
+    width: 100%;
+}
+.first-flex label{
+    margin-left:10px ;
+    margin-bottom: 2px;
+}
+.first-input{
+    margin-bottom: 8px;
+}
+.first-input input{
+    width: 100%;
+}
+.first-flex button{
+    outline: none;
+    border: none;
+    background: #6AA3FF;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+}
+.spacer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.underline-one{
+    border: 1px solid #6AA3FF;
+    width: 25%;
+}
+.spacer-box{
+    border: 1px solid #6AA3FF;
+    padding: 8px;
+}
+.underline-two{
+    border: 1px solid #6AA3FF;
+    width: 25%;
+
+
+}
+.login-logo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.secong-grid-item img{
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+    .signin-container-holder{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+    .signin-flex{
+        display: grid;
+        grid-template-columns: 50% 40%;
+    }
+    .secong-grid-item img{
+        display: block;
+    }
+   
+    .sigin-container{
+        background-color: white;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 65vw;
+        height: auto;  
+        margin-top: 100px;
+        margin-bottom: 100px;  
+
+    }
+    .typo-holder{
+        padding-left: 20px;
+        display: grid;
+        place-items: inherit;
+    }
+    .first-input input{
+        width: 100%;
+    }
+    .secong-grid-item{
+        display: block;
+    }
+}
