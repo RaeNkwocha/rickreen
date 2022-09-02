@@ -11,6 +11,9 @@ import Ride from "./pages/Dashboard/BasicUsers/Dashboard/Ride";
 import Dispatch from "./pages/Dashboard/BasicUsers/Dashboard/Dispatch";
 import PlaceOrder from "./pages/Dashboard/BasicUsers/Dashboard/PlaceOrder";
 import UpdateProfile from "./pages/Dashboard/BasicUsers/Dashboard/ChangePassword/components";
+import OurServices from "./pages/ourServices";
+import AboutUs from "./pages/aboutUs";
+import ContactUs from "./pages/contactUs";
 function App() {
   return (
     <div>
@@ -36,6 +39,9 @@ function App() {
                 <Route path="/update-profile" element={<UpdateProfile/>}/>
               </Route>
               <Route path="/" element={<Home />} />
+              <Route path="/our-services" element={<OurServices />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
             </Routes>
           </Router>
         </RecoilRoot>

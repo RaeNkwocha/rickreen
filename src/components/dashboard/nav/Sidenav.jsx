@@ -14,10 +14,9 @@ const Sidenav = () => {
           <li className="nav-item">
             <div className="nav-link-span-holder">
               {" "}
-              <a
-                className="nav-link active text-white"
-                aria-current="page"
-                href="/dashboard"
+              <Link
+                to="/dashboard"
+                style={{ color: "black", textDecoration: "none" }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -35,12 +34,15 @@ const Sidenav = () => {
                   <polyline points="9 22 9 12 15 12 15 22"></polyline>
                 </svg>{" "}
                 <span className="ml-2">Dashboard</span>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item">
             <div className="nav-link-span-holder">
-              <a className="nav-link " href="/food/orders">
+              <Link
+                to="/food/orders"
+                style={{ color: "black", textDecoration: "none" }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -57,13 +59,15 @@ const Sidenav = () => {
                   <polyline points="13 2 13 9 20 9"></polyline>
                 </svg>
                 <span className="ml-2">Orders</span>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item">
             <div className="nav-link-span-holder">
-              <a className="nav-link" href="#">
-                <svg
+            <Link
+                to="#"
+                style={{ color: "black", textDecoration: "none" }}
+              >                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -80,13 +84,15 @@ const Sidenav = () => {
                   <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                 </svg>
                 <span className="ml-2">Products</span>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item">
             <div className="nav-link-span-holder">
-              <a className="nav-link" href="#">
-                <svg
+            <Link
+                to="#"
+                style={{ color: "black", textDecoration: "none" }}
+              >                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -104,13 +110,15 @@ const Sidenav = () => {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
                 <span className="ml-2">Customers</span>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item">
             <div className="nav-link-span-holder">
-              <a className="nav-link" href="#">
-                <svg
+            <Link
+                to="#"
+                style={{ color: "black", textDecoration: "none" }}
+              >                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -127,11 +135,14 @@ const Sidenav = () => {
                   <line x1="6" y1="20" x2="6" y2="14"></line>
                 </svg>
                 <span className="ml-2">Reports</span>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="nav-item">
-          <Link to="/update-profile" style={{ color: "black", textDecoration: "none" }}>
+            <Link
+              to="/update-profile"
+              style={{ color: "black", textDecoration: "none" }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

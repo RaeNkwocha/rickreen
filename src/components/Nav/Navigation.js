@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import "../Nav/css/nav.css";
 import Popup from "../../shared/modal/Popup";
+import { Link } from "react-router-dom";
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const handleToggle = () => {
@@ -100,7 +101,12 @@ const Navigation = () => {
                       <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
                     </svg>
                     <div>
-                      <h5>Home</h5>
+                      <Link
+                        style={{ textDecoration: "none", color: "black" }}
+                        to="/"
+                      >
+                        <h5>Home</h5>
+                      </Link>
                     </div>
                   </div>
                   <div style={{ marginTop: "35px" }} className="nav-card-flex">
@@ -116,7 +122,13 @@ const Navigation = () => {
                     </svg>{" "}
                     <div>
                       {" "}
-                      <h5>Our Services</h5>
+                      <Link
+                        style={{ textDecoration: "none", color: "black" }}
+                        to="our-services"
+                      >
+                        {" "}
+                        <h5>Our Services</h5>
+                      </Link>
                     </div>
                   </div>
                   <div style={{ marginTop: "35px" }} className="nav-card-flex">
@@ -131,10 +143,36 @@ const Navigation = () => {
                       <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
                     </svg>{" "}
                     <div>
-                      {" "}
-                      <h5>About Us</h5>
+                      <Link
+                        style={{ textDecoration: "none", color: "black" }}
+                        to="/about-us"
+                      >
+                        {" "}
+                        <h5>About Us</h5>
+                      </Link>
                     </div>
                   </div>
+                  {/* <div style={{ marginTop: "35px" }} className="nav-card-flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fillRule="currentColor"
+                      className="bi bi-house-door-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                    </svg>{" "}
+                    <div>
+                      <Link
+                        style={{ textDecoration: "none", color: "black" }}
+                        to="whats-new"
+                      >
+                        {" "}
+                        <h5>What's new?</h5>
+                      </Link>
+                    </div>
+                  </div> */}
                   <div style={{ marginTop: "35px" }} className="nav-card-flex">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -148,26 +186,16 @@ const Navigation = () => {
                     </svg>{" "}
                     <div>
                       {" "}
-                      <h5>What's new?</h5>
+                      <Link
+                        style={{ textDecoration: "none", color: "black" }}
+                        to="contact-us"
+                      >
+                        {" "}
+                        <h5>Contact Us</h5>
+                      </Link>
                     </div>
                   </div>
-                  <div style={{ marginTop: "35px" }} className="nav-card-flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fillRule="currentColor"
-                      className="bi bi-house-door-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
-                    </svg>{" "}
-                    <div>
-                      {" "}
-                      <h5>Contact Us</h5>
-                    </div>
-                  </div>
-                  <div style={{ marginTop: "35px" }} className="nav-card-flex">
+                  {/* <div style={{ marginTop: "35px" }} className="nav-card-flex">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -223,18 +251,33 @@ const Navigation = () => {
                       {" "}
                       <h5>Food</h5>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : null}
           </div>
           <div className="second-nav">
             <ul className="second-nav">
-              <li>Home</li>
-              <li>Our Services</li>
-              <li>About Us</li>
-              <li>What's New</li>
-              <li>Contact Us</li>
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+                {" "}
+                <li>Home</li>
+              </Link>
+              <Link to="/our-services" style={{ textDecoration: "none", color: "black" }}>
+                {" "}
+                <li>Our Services</li>
+              </Link>
+              <Link to="/about-us" style={{ textDecoration: "none", color: "black" }}>
+                {" "}
+                <li>About Us</li>
+              </Link>
+              {/* <Link to="/whats-new" style={{ textDecoration: "none", color: "black" }}>
+                {" "}
+                <li>What's New</li>
+              </Link> */}
+              <Link to="/contact-us" style={{ textDecoration: "none", color: "black" }}>
+                {" "}
+                <li>Contact Us</li>
+              </Link>
               <li>
                 <Popup />
               </li>

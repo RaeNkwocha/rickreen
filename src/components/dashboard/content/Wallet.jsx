@@ -1,8 +1,9 @@
 import React from 'react'
+import StatsCard from './walletComponets/StatsCard'
 
 const Wallet = () => {
   return (
-    <div>Wallet</div>
+    <><StatsCard/></>
   )
 }
 
