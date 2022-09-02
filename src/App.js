@@ -14,6 +14,7 @@ import UpdateProfile from "./pages/Dashboard/BasicUsers/Dashboard/ChangePassword
 import OurServices from "./pages/ourServices";
 import AboutUs from "./pages/aboutUs";
 import ContactUs from "./pages/contactUs";
+import Login from "./pages/Login";
 function App() {
   return (
     <div>
@@ -42,6 +43,7 @@ function App() {
               <Route path="/our-services" element={<OurServices />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </Router>
         </RecoilRoot>

@@ -14,7 +14,6 @@ h4 {
     line-height: 1.5;
 }
 
-/* ///// inputs /////*/
 
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
     font-size: 0.75em;
@@ -54,7 +53,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     max-width: 100%;
 }
 
-input,
+.contact-us-input,
 textarea {
     padding: 30px;
     border: 0;

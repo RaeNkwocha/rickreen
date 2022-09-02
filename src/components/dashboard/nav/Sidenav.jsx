@@ -62,7 +62,7 @@ const Sidenav = () => {
               </Link>
             </div>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <div className="nav-link-span-holder">
             <Link
                 to="#"
@@ -86,8 +86,8 @@ const Sidenav = () => {
                 <span className="ml-2">Products</span>
               </Link>
             </div>
-          </li>
-          <li className="nav-item">
+          </li> */}
+          {/* <li className="nav-item">
             <div className="nav-link-span-holder">
             <Link
                 to="#"
@@ -112,8 +112,8 @@ const Sidenav = () => {
                 <span className="ml-2">Customers</span>
               </Link>
             </div>
-          </li>
-          <li className="nav-item">
+          </li> */}
+          {/* <li className="nav-item">
             <div className="nav-link-span-holder">
             <Link
                 to="#"
@@ -137,7 +137,7 @@ const Sidenav = () => {
                 <span className="ml-2">Reports</span>
               </Link>
             </div>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link
               to="/update-profile"

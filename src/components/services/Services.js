@@ -1,4 +1,6 @@
 import React from "react";
+import authService from "../../services/Services";
+import { useNavigate } from "react-router";
 import "../services/css/services.css";
 const Services = () => {
   const service = [
@@ -24,6 +26,17 @@ const Services = () => {
       cta: "GET STARTED",
     },
   ];
+  let user = authService.user;
+  const navigate = useNavigate()
+
+  const handleStarted=()=>{
+    if(user){
+      navigate("/dashboard")
+    } else{
+      navigate("/login")
+
+    }
+  }
   return (
     <>
       <div className="text-center">
@@ -49,7 +62,7 @@ const Services = () => {
                 <p>{item.desc}</p>
               </div>
               <div className="cta-btn">
-                <button>{item.cta}</button>
+                <button onClick={handleStarted}>{item.cta}</button>
               </div>
             </div>
           ))}
